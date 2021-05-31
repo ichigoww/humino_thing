@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="test"
+run/main_scene="res://Node2D.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=500
+
+[global]
+
+add=false
+
+[locale]
+
+fallback="ja_JP"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_clear_color=Color( 0.0429688, 0.0425911, 0.0425911, 1 )
+environment/default_environment="res://default_env.tres"

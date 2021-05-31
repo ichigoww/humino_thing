@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/も.wav-e9fbb780c699b8e51a145e6d42ca74b8.sample"
+
+[deps]
+
+source_file="res://sounds/も.wav"
+dest_files=[ "res://.import/も.wav-e9fbb780c699b8e51a145e6d42ca74b8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

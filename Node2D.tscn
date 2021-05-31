@@ -1,0 +1,113 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://sprites/a.png" type="Texture" id=1]
+[ext_resource path="res://Node2D.gd" type="Script" id=2]
+[ext_resource path="res://sprites/hum_base.png" type="Texture" id=3]
+[ext_resource path="res://sprites/eyes (5).png" type="Texture" id=4]
+[ext_resource path="res://sprites/eyes (6).png" type="Texture" id=5]
+[ext_resource path="res://sprites/eyes (7).png" type="Texture" id=6]
+[ext_resource path="res://sprites/i.png" type="Texture" id=7]
+[ext_resource path="res://sprites/e.png" type="Texture" id=8]
+[ext_resource path="res://sprites/idle.png" type="Texture" id=9]
+[ext_resource path="res://sprites/u.png" type="Texture" id=10]
+[ext_resource path="res://sprites/o.png" type="Texture" id=11]
+[ext_resource path="res://fonts/jp_custom_font.tres" type="DynamicFont" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "blink",
+"speed": 9.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "n",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "a",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "i",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "e",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "o",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "u",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 250, 230 )
+script = ExtResource( 2 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = -121.667
+margin_top = 118.336
+margin_right = 120.333
+margin_bottom = 213.336
+mouse_default_cursor_shape = 0
+custom_fonts/font = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -20.0
+margin_top = 224.5
+margin_right = 20.0
+margin_bottom = 264.5
+custom_fonts/font = ExtResource( 12 )
+text = "Talk"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player" type="AudioStreamPlayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.879167, 0.879167 )
+texture = ExtResource( 3 )
+
+[node name="eyes_animated_sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.879, 0.879 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="mouth_animated_sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.879, 0.879 )
+frames = SubResource( 2 )
+animation = "n"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

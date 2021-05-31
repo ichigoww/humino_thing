@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ぱ.wav-85c74926852eeddb65340a7bfdfa3ad1.sample"
+
+[deps]
+
+source_file="res://sounds/ぱ.wav"
+dest_files=[ "res://.import/ぱ.wav-85c74926852eeddb65340a7bfdfa3ad1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
