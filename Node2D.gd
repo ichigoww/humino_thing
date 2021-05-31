@@ -68,6 +68,7 @@ func load_sounds(path):
 					var speech_player = AudioStreamPlayer.new()
 					get_node("/root/Node2D").add_child(speech_player)
 					speech_player.stream = load(path + "/" + file_name)
+					speech_player.volume_db = -12.0
 					dict_gojuon[key[0]] = speech_player
 			file_name = dir.get_next()
 	else:
