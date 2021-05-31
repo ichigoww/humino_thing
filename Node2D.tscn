@@ -90,8 +90,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="player" type="AudioStreamPlayer" parent="."]
-
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.879167, 0.879167 )
 texture = ExtResource( 3 )

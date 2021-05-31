@@ -1,7 +1,6 @@
 extends Node2D
 
 onready var textBox = get_node("TextEdit")
-onready var player = get_node("player")
 onready var eyes_anim = get_node("eyes_animated_sprite")
 onready var mouth_anim = get_node("mouth_animated_sprite")
 
