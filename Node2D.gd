@@ -9,8 +9,10 @@ onready var mouth_anim = get_node("mouth_animated_sprite")
 onready var timer_blink = get_node("Timer")
 var rng = RandomNumberGenerator.new()
 
-# why dictionaries? less trouble (i think...)
+# Dictionary for character and audiostreams, used for playing audiofiles
 var dict_gojuon = {}
+
+# Dictionary for character vowels, used for mouth animations
 var dict_mouth = {
 	"あかがさざただなはばぱまやらわ": "a",
 	"いきぎしじちぢにひびぴみり": "i",
@@ -19,30 +21,6 @@ var dict_mouth = {
 	"おこごそぞとどのほぼぽもよろを": "o",
 	"ん": "n"
 }
-
-# TODO 1?: っ, some kind of pause before the next sound? maybe based on the starting
-# consonant i could chop some audio and create a sound file for each case
-# then i could throw it on the same dictionary and code the condition, looking
-# ahead each time a っ is found
-# something like
-# change for -> while:
-#	if i == "っ" or i == "ッ" and i+1 < len(text):
-#		get next character
-#		get the っ+next_character audio stream
-#		play it
-
-# TODO 2?: small characters? how the fuck am i gonna do that :thinking:
-
-# TODO 3?: Katakana!!!!!11 this one should be easier? should i even bother though?
-#	- to avoid having to recreate every fucking audio file, i'll just have a 
-#	function that translates katakana to hiragana
-#	- for this i need another dictionary that has every character and it's 
-#	equivalent
-#	- then, after translating i'll just replace the characters of
-#	the original text :sunglasses:
-
-# TODO 4?:
-#	- make eyes move so it doesnt feel too static
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -58,7 +36,7 @@ func _process(_delta):
 func _on_Button_pressed():
 	parse_and_play(textBox.text)
 
-# Parses each character on input text, and plays audio and animation
+# Parses each character on TextEdit control, and plays audio and mouth animation
 func parse_and_play(text):
 	for i in text:
 		if(dict_gojuon.has(i)):
@@ -68,14 +46,15 @@ func parse_and_play(text):
 	yield(mouth_anim, "animation_finished")
 	mouth_anim.play("idle")
 	
-# Gets vowel for current character, used for playing a mouth animation
+# Gets the vowel animation for each character, so the corresponding animation
+# can be played
 func search_vowel_anim(character):
 	for mouth_key in dict_mouth.keys():
 		if character in mouth_key:
 			return dict_mouth[mouth_key]
 	return "idle"
 
-# Load soundfiles from a path
+# Load soundfiles from a specific path
 # (I don't know what happens if there's something else that's not an audio file
 # in the specified path, so yes, this isn't very good)
 func load_sounds(path):
