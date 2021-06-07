@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shi.wav-81102125e5f38765e7e5a603ced7e1fb.sample"
+
+[deps]
+
+source_file="res://sounds/shi.wav"
+dest_files=[ "res://.import/shi.wav-81102125e5f38765e7e5a603ced7e1fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

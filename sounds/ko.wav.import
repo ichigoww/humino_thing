@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ko.wav-81d1f81ced5924c67634ebe11341e58a.sample"
+
+[deps]
+
+source_file="res://sounds/ko.wav"
+dest_files=[ "res://.import/ko.wav-81d1f81ced5924c67634ebe11341e58a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

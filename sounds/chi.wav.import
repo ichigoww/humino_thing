@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/chi.wav-ab89697f2271097424600f50991fca81.sample"
+
+[deps]
+
+source_file="res://sounds/chi.wav"
+dest_files=[ "res://.import/chi.wav-ab89697f2271097424600f50991fca81.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

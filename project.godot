@@ -8,15 +8,33 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "SoundManagerModule",
+"language": "GDScript",
+"path": "res://addons/sound_manager/module/internal_scripts/SoundManager_config.gd"
+} ]
+_global_script_class_icons={
+"SoundManagerModule": ""
+}
+
 [application]
 
-config/name="test"
+config/name="humino_test"
 run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
 
 [display]
 
 window/size/width=500
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/sound_manager/plugin.cfg" )
 
 [global]
 
@@ -24,7 +42,7 @@ add=false
 
 [locale]
 
-fallback="ja_JP"
+locale_filter=[ 1, [ "en", "ja", "ja_JP" ] ]
 
 [physics]
 

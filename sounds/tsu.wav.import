@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tsu.wav-bc8c0e0016ae568d1d6777d9bdba1e08.sample"
+
+[deps]
+
+source_file="res://sounds/tsu.wav"
+dest_files=[ "res://.import/tsu.wav-bc8c0e0016ae568d1d6777d9bdba1e08.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ke.wav-a6f0299ff490aa97d1dff95e899dfa12.sample"
+
+[deps]
+
+source_file="res://sounds/ke.wav"
+dest_files=[ "res://.import/ke.wav-a6f0299ff490aa97d1dff95e899dfa12.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

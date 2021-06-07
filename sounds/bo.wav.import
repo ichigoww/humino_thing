@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bo.wav-576f843a03990faab2b1e53f8b31c862.sample"
+
+[deps]
+
+source_file="res://sounds/bo.wav"
+dest_files=[ "res://.import/bo.wav-576f843a03990faab2b1e53f8b31c862.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

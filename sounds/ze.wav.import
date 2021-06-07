@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ze.wav-8b5d4207519dfda3b71eff6a9ea1f905.sample"
+
+[deps]
+
+source_file="res://sounds/ze.wav"
+dest_files=[ "res://.import/ze.wav-8b5d4207519dfda3b71eff6a9ea1f905.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

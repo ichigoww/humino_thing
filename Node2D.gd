@@ -1,79 +1,55 @@
-extends Node2D
+extends "res://dictionaries.gd"
 
-onready var textBox = get_node("TextEdit")
-onready var eyes_anim = get_node("eyes_animated_sprite")
-onready var mouth_anim = get_node("mouth_animated_sprite")
+# Node with input text
+onready var textBox = $TextEdit
+# Node for animating eyes
+onready var eyes_anim = $eyes_animated_sprite
+# Node for animating mouth
+onready var mouth_anim = $mouth_animated_sprite
 
 # Timer and rng for blinking at random intervals of time
-onready var timer_blink = get_node("Timer")
+onready var timer_blink = $Timer
 var rng = RandomNumberGenerator.new()
-
-# Dictionary for character and audiostreams, used for playing audiofiles
-var dict_gojuon = {}
-
-# Dictionary for character vowels, used for mouth animations
-var dict_mouth = {
-	"あかがさざただなはばぱまやらわ": "a",
-	"いきぎしじちぢにひびぴみり": "i",
-	"うくぐすずつづぬふぶぷむゆる": "u",
-	"えけげせぜてでねへべぺめれ": "e",
-	"おこごそぞとどのほぼぽもよろを": "o",
-	"ん": "n"
-}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(textBox.get_font("font").get_font_data().font_path)
-	load_sounds("res://sounds")
+	var screen_size = OS.get_screen_size(0)
+	var window_size = OS.get_window_size()
+	OS.set_window_position(screen_size*0.5 - window_size*0.5)
 	create_timer(0.7, 1.7)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
 
-# Event for button
+# Function called on button press
 func _on_Button_pressed():
 	parse_and_play(textBox.text)
 
-# Parses each character on TextEdit control, and plays audio and mouth animation
+# Parses each character on 'TextEdit', plays audio and animates mouth based
+# on input
 func parse_and_play(text):
 	for i in text:
-		if(dict_gojuon.has(i)):
-			dict_gojuon[i].play()
+		if(dict_translate.has(i)):
+			var translate = dict_translate[i]
+			# Playing sounds with SoundManager addon because creating
+			# an audiostream manager is a pain in the ass
+			SoundManager.play_bgm("res://sounds/" + translate + ".wav")
 			mouth_anim.play(search_vowel_anim(i))
-			yield(dict_gojuon[i], "finished")
+			# Wait until the audio finishes playing to continue
+			yield(SoundManager.Audiostreams[0], "finished_playing")
+		else:
+			print("Character " + i + " not valid")
 	yield(mouth_anim, "animation_finished")
 	mouth_anim.play("idle")
 	
-# Gets the vowel animation for each character, so the corresponding animation
-# can be played
+# Gets vowel for each character (for example: ぱ->a, へ->e, ゆ ->u, and so on)
+# This way we can animate the mouth based on specific vowels
 func search_vowel_anim(character):
 	for mouth_key in dict_mouth.keys():
 		if character in mouth_key:
 			return dict_mouth[mouth_key]
 	return "idle"
-
-# Load soundfiles from a specific path
-# (I don't know what happens if there's something else that's not an audio file
-# in the specified path, so yes, this isn't very good)
-func load_sounds(path):
-	var dir = Directory.new()
-	if dir.open(path) == OK:
-		dir.list_dir_begin()
-		var file_name = dir.get_next()
-		while file_name != "":
-			if !dir.current_is_dir():
-				var key = file_name.split(".")
-				if len(key) == 2:
-					var speech_player = AudioStreamPlayer.new()
-					get_node("/root/Node2D").add_child(speech_player)
-					speech_player.stream = load(path + "/" + file_name)
-					speech_player.volume_db = -12.0
-					dict_gojuon[key[0]] = speech_player
-			file_name = dir.get_next()
-	else:
-		print("An error occurred when trying to access the path.")
-	pass
 
 # When timer runs out, play blink animation and start another countdown
 func _on_Timer_timeout():
