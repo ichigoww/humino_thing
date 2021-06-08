@@ -1,5 +1,4 @@
-## [English](#english)
-## [日本語](#japanese)
+#### [English](#english) | [日本語](#japanese)
 
 
 # <a name="english"></a> A software where you can make [Yomiyama Humino](https://www.youtube.com/channel/UCBZG0VVWKYjcwb0h2Y0yEbA) talk
@@ -17,6 +16,7 @@ Kind of a long name, but very self-explanatory
 * Small characters
 * The "は" particle
 * Punctuation and blank spaces
+* Window resizing
 * Probably something else I can't remember right now
 
 ## What's in the future for this little experiment?
@@ -42,6 +42,7 @@ You're going to have to read my code though, good luck with that 🤔
 * 小さい文字
 * 「は」助詞
 * 句読点や空白
+* ウィンドウのサイズ変更
 * 多分、今は思い出せない他の何か
 
 ## この小さな実験の今後の展開は？
@@ -54,6 +55,6 @@ You're going to have to read my code though, good luck with that 🤔
 
 ## Resources used
 
-Made in [Godot](https://godotengine.org/)
-Audio by: [Yomiyama Humino](https://www.youtube.com/channel/UCBZG0VVWKYjcwb0h2Y0yEbA)
-Font: [Noto Sans CJK JP](https://www.google.com/get/noto/#sans-jpan)
+Made in [Godot](https://godotengine.org/)  
+Audio by: [Yomiyama Humino](https://www.youtube.com/channel/UCBZG0VVWKYjcwb0h2Y0yEbA)  
+Font: [Noto Sans CJK JP](https://www.google.com/get/noto/#sans-jpan)  
