@@ -30,7 +30,9 @@ SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
 
 [display]
 
-window/size/width=500
+window/size/width=512
+window/size/resizable=false
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
