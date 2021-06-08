@@ -27,7 +27,7 @@ You're going to have to read my code though, good luck with that 🤔
   
 ---
   
-# <a name="japanese"></a> [読谷山フミノ](https://www.youtube.com/channel/UCBZG0VVWKYjcwb0h2Y0yEbA)を語らせることができるソフト
+# <a name="japanese"></a> [読谷山文乃](https://www.youtube.com/channel/UCBZG0VVWKYjcwb0h2Y0yEbA)を語らせることができるソフト
 
 長い名前ですが、わかりやすいと思う
 
