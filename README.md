@@ -26,10 +26,16 @@ If you want you can download the source and do whatever you want with it
 You're going to have to read my code though, good luck with that 🤔
 I also wanted to try and reduce the .exe's size but apparently I need Visual Studio, and I really don't want to install that...
 
-## How to download?
+## How to download
 
-Head over to the "Releases" section 
-  
+Click on "Humino 1.0" on the "Releases" section
+
+![alt text](https://github.com/ichigoww/humino_thing/blob/master/instructions/download1.png?raw=true)
+
+Click on Humino.zip to save the file
+
+![alt text](https://github.com/ichigoww/humino_thing/blob/master/instructions/download2.png?raw=true)
+
 ---
   
 # <a name="japanese"></a> [読谷山文乃](https://www.youtube.com/channel/UCBZG0VVWKYjcwb0h2Y0yEbA)を語らせることができるソフト
@@ -56,6 +62,16 @@ Head over to the "Releases" section
 欲しい人はソースをダウンロードして好きなように使ってください。
 私のコードを読まなければなりませんが、頑張ってください（先に謝っておきます）。
 あと、.exeのサイズを小さくしようと思ったのですが、どうやらVisual Studioが必要です、それを本当にインストールしたくない…
+
+## ダウンロード方法
+
+"Releases" で "Humino 1.0" をクリックして 
+
+![alt text](https://github.com/ichigoww/humino_thing/blob/master/instructions/download1.png?raw=true)
+
+"Humino.zip" をクリックしてダウンロードします
+
+![alt text](https://github.com/ichigoww/humino_thing/blob/master/instructions/download2.png?raw=true)
 
 ---
 
