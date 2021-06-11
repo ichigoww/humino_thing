@@ -24,6 +24,11 @@ Kind of a long name, but very self-explanatory
 I don't know, probably not much
 If you want you can download the source and do whatever you want with it
 You're going to have to read my code though, good luck with that 🤔
+I also wanted to try and reduce the .exe's size but apparently I need Visual Studio, and I really don't want to install that...
+
+## How to download?
+
+Head over to the "Releases" section 
   
 ---
   
@@ -50,6 +55,7 @@ You're going to have to read my code though, good luck with that 🤔
 わからないけど、たぶん大したことないよ
 欲しい人はソースをダウンロードして好きなように使ってください。
 私のコードを読まなければなりませんが、頑張ってください（先に謝っておきます）。
+あと、.exeのサイズを小さくしようと思ったのですが、どうやらVisual Studioが必要です、それを本当にインストールしたくない…
 
 ---
 
