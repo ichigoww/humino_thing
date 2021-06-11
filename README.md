@@ -22,9 +22,9 @@ Kind of a long name, but very self-explanatory
 ## What's in the future for this little experiment?
 
 I don't know, probably not much
-If you want you can download the source and do whatever you want with it
-You're going to have to read my code though, good luck with that 🤔
-I also wanted to try and reduce the .exe's size but apparently I need Visual Studio, and I really don't want to install that...
+If you want you can download the source and do whatever you want with it  
+You're going to have to read my code though, good luck with that 🤔  
+I also wanted to try and reduce the .exe's size but apparently I need Visual Studio, and I really don't want to install that...  
 
 ## How to download
 
@@ -58,10 +58,10 @@ Click on Humino.zip to save the file
 
 ## この小さな実験の今後の展開は？
 
-わからないけど、たぶん大したことないよ
-欲しい人はソースをダウンロードして好きなように使ってください。
-私のコードを読まなければなりませんが、頑張ってください（先に謝っておきます）。
-あと、.exeのサイズを小さくしようと思ったのですが、どうやらVisual Studioが必要です、それを本当にインストールしたくない…
+わからないけど、たぶん大したことないよ  
+欲しい人はソースをダウンロードして好きなように使ってください  
+私のコードを読まなければなりませんが、頑張ってください（先に謝っておきます）  
+あと、.exeのサイズを小さくしようと思ったのですが、どうやらVisual Studioが必要です、それを本当にインストールしたくない…  
 
 ## ダウンロード方法
 
